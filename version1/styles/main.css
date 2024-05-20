@@ -2,7 +2,7 @@
  * Created Date: May 15 2024, 04:48:30 PM
  * Author: @WhoTho whotho06@gmail.com
  * -----
- * Last Modified: May 19 2024, 10:55:30 PM
+ * Last Modified: May 19 2024, 11:18:19 PM
  * Modified By: @WhoTho
  * -----
  * CHANGE LOG:
@@ -27,7 +27,6 @@ body {
     color: var(--color-black);
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
-    width: 100vw;
 }
 
 /* Minimal Scrollbar */
