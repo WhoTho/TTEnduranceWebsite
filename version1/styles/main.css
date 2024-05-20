@@ -2,7 +2,7 @@
  * Created Date: May 15 2024, 04:48:30 PM
  * Author: @WhoTho whotho06@gmail.com
  * -----
- * Last Modified: May 19 2024, 11:18:19 PM
+ * Last Modified: May 19 2024, 11:33:48 PM
  * Modified By: @WhoTho
  * -----
  * CHANGE LOG:
@@ -83,4 +83,18 @@ p {
 
 strong {
     font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
 }
