@@ -1,0 +1,198 @@
+/*
+ * Created Date: May 16 2024, 04:44:18 PM
+ * Author: @WhoTho whotho06@gmail.com
+ * -----
+ * Last Modified: May 19 2024, 10:52:59 PM
+ * Modified By: @WhoTho
+ * -----
+ * CHANGE LOG:
+ * Date                        | Comments
+ * ----------------------------+---------------------------------------------
+ */
+
+/* ----------------------------- GENERAL HEADER ----------------------------- */
+
+header {
+    display: flex;
+    position: sticky;
+    flex-direction: row;
+
+    top: 0;
+
+    padding: 1rem;
+    background-color: var(--color-dark);
+
+    color: var(--color-white);
+
+    z-index: 1000;
+
+    max-height: 5%;
+    min-height: 40px;
+}
+
+/* ---------------------------------- LOGO ---------------------------------- */
+
+#header-logo-container {
+    height: 40px;
+    width: 148px;
+    margin-right: auto;
+
+    overflow: hidden;
+    /* outline: 1px solid black; */
+}
+
+#header-logo-container > a > img {
+    width: 110%;
+    border-radius: 10%;
+    translate: -5% -15%;
+
+    background: var(--color-white);
+}
+
+/* ----------------------------- GENERAL NAV BAR ---------------------------- */
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+
+    gap: 1rem;
+}
+
+#nav-list {
+    display: flex;
+    flex-direction: row;
+
+    list-style-type: none;
+    gap: 0.25rem;
+}
+
+/* ------------------------------ LOGIN BUTTON ------------------------------ */
+
+.login-button {
+    background-color: var(--color-secondary) !important;
+    border-color: var(--color-secondary) !important;
+    border: 3px solid;
+}
+
+.login-button:hover {
+    background-color: transparent !important;
+    transition: background-color 0.3s;
+}
+
+/* ------------------------------- LIST ITEMS ------------------------------- */
+
+#nav-list > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    padding: 0.5rem 1rem;
+    /* border: 3px solid var(--color-darkest);
+    background-color: var(--color-darkest); */
+
+    color: var(--color-white);
+
+    cursor: pointer;
+}
+
+#nav-list > li:hover {
+    background-color: var(--color-darkest);
+    transition: background-color 0.3s !important;
+}
+
+#nav-list > li:has(.sub-nav-list-wrapper) {
+    transition: background-color 0.3s 0.1s;
+}
+
+/* --------------------------- GENERAL LIST LINKS --------------------------- */
+
+#nav-list li > a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+/* ------------------------------ SUB NAV LISTS ----------------------------- */
+
+.sub-nav-list-wrapper {
+    position: absolute;
+
+    /* right: -3px; border width */
+    left: 0;
+    top: 100%;
+    z-index: 1;
+
+    min-width: 100%;
+    /* min-width: calc(100% + 6px); */
+    max-height: 0px;
+    margin: 0px;
+    padding: 0px;
+
+    transition: max-height 0.25s cubic-bezier(0, 0.9, 0, 1.1);
+
+    overflow: hidden;
+}
+
+.sub-nav-list {
+    display: flex;
+    flex-direction: column;
+
+    width: max-content;
+    min-width: calc(100%);
+    border: 3px solid var(--color-darkest);
+
+    list-style-type: none;
+}
+
+.sub-nav-list-label:after {
+    content: "";
+    display: inline-block;
+    margin-left: 0.255rem;
+    vertical-align: 0.2rem;
+    content: "";
+    border-top: 0.3rem solid;
+    border-right: 0.3rem solid transparent;
+    border-bottom: 0;
+    border-left: 0.3rem solid transparent;
+}
+
+.sub-nav-list > li {
+    padding: 0.5rem;
+    background-color: var(--color-dark);
+
+    color: var(--color-white);
+
+    transition: background-color 0.3s;
+
+    cursor: pointer;
+}
+
+.sub-nav-list > li:hover {
+    background-color: var(--color-darkest);
+}
+
+#nav-list > li:hover .sub-nav-list-wrapper {
+    max-height: calc(100vh - 80px);
+    background-color: var(--color-dark);
+
+    overflow-y: scroll;
+
+    transition: max-height 0.25s ease-in-out;
+
+    /* outline: 3px solid var(--color-darkest); */
+}
+
+.sub-nav-list-wrapper {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+.sub-nav-list-wrapper::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+@media screen and (max-width: 1250px) {
+    #nav-bar {
+        display: none;
+    }
+}

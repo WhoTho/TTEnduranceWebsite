@@ -1,0 +1,16 @@
+/*
+ * Created Date: May 15 2024, 04:48:30 PM
+ * Author: @WhoTho whotho06@gmail.com
+ * -----
+ * Last Modified: May 19 2024, 12:59:30 PM
+ * Modified By: @WhoTho
+ * -----
+ * CHANGE LOG:
+ * Date                        | Comments
+ * ----------------------------+---------------------------------------------
+ */
+
+footer {
+    height: 200px;
+    background-color: var(--color-dark);
+}
